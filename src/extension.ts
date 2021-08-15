@@ -81,6 +81,28 @@ export function activate(context: vscode.ExtensionContext) {
     profileManager.refresh();
   });
 
+  vscode.commands.registerCommand("profileManager.profiles.update", async (profile: Profile) => {
+    if (profile.label === undefined) {
+      return;
+    }
+
+    profiles[profile.label as string] = {
+      extensions: getUserExtensions(),
+      settings: {},
+    };
+
+    await vscode.workspace
+      .getConfiguration()
+      .update(
+        "profileManager.profiles",
+        profiles,
+        vscode.ConfigurationTarget.Global
+      );
+
+    profileManager.refresh();
+  });
+
+
   vscode.commands.registerCommand(
     "profileManager.profiles.remove",
     async (profile: Profile) => {
