@@ -3,6 +3,11 @@
   "displayName": "Profile Manager",
   "description": "",
   "version": "0.0.1",
+  "publisher": "mmateusa",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MateusGX/profile-manager.git"
+  },
   "engines": {
     "vscode": "^1.59.0"
   },
