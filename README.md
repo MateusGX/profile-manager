@@ -25,5 +25,5 @@ UNDER DEVELOPMENT
 ## TO-DO
 
 - [ ] Saving settings in profiles
-s
+
 > Items are being added with development time
